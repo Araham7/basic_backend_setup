@@ -1,54 +1,22 @@
-import emailValidator from 'email-validator'
+import emailValidator from 'email-validator';
 import { User } from "../model/userSchema.js";
 
 const signUp = async (req , res)=>{
-    res.status(200).json({
-        success : true,
-        message : "you are on the signup Page!" 
-    })
+    // signup route handalling.
 }
 
 const signIn = async (req , res)=>{
-
-    let { name , email , password , confirmPassword } = req.body;
-
-    // Validate missing fields, return error if any field is empty:---
-    if (!name || !email || !password || !confirmPassword) {
-        return res.status(400).json({
-            success: false ,
-            message: "Every field is required!"
-        })
-    }
-
-    // Validate email :---
-    if (!emailValidator.validate(email)) {
-        return res.status(400).json({
-            success: false,
-            message: "Invalid email address!"
-        });
-    }
-
-    if(password !== confirmPassword){
-        return res.status(200).json({
-            success: false ,
-            message: "password and confirmPassword dosn't matched!"
-        })
-    }
-
-    res.status(200).json({
-        name ,
-        email , 
-        password ,
-        confirmPassword
-    })
+    // signin route handalling.
 }
 
 
-const getUser = ((req , res)=>{
-})
+const getUser = (req , res)=>{
+    // getuser route handalling.
+}
 
-const logOut = ((req , res)=>{
-})
+const logOut = (req , res)=>{
+    // logout route handalling.
+}
 
 
-export { signUp , signIn , getUser , logOut }
+export { signUp , signIn , getUser , logOut };

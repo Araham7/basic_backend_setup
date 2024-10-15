@@ -9,11 +9,6 @@ router.get("/logout" , logOut);
 
 
 
-
-
-
-
 export { router };
-
 
 
